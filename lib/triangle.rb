@@ -11,16 +11,15 @@ end
   end
 
   def kind
-    if(negative? == true || valid? == false)
-      raise TriangleError
-    elsif(equilateral?)
-      :equilateral
-    elsif(scalene?)
-      :scalene
-    elsif(isosceles?)
-      :isosceles
+      validate_triangle
+      if a == b && b == c
+        :equilateral
+      elsif a == b || b == c || a == c
+        :isosceles
+      else
+        :scalene
+      end
     end
-  end
 
   def negative?
     @sides.each do |length|
