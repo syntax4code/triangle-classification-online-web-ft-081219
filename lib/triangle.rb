@@ -12,9 +12,9 @@ end
 
   def kind  #Give your Triangles an instance method, kind that returns, as a symbol, :equilateral, :isosceles, :scalene
       validate_triangle
-      if a == b && b == c
+      if side1 == side2 && side2 == c
         :equilateral
-      elsif a == b || b == c || a == c
+      elsif side1 == side2 || side2 == c || side1 == c
         :isosceles
       else
         :scalene
@@ -29,23 +29,7 @@ end
     end
   end
 
-  def equilateral?
-    (@side1 == @side2) && (@side1 == @side3)
-  end
-
-  def scalene?
-    (@side1 != @side2) && (@side1!= @side3) && (@side2 != @side3)
-  end
-
-  def isosceles?
-    (@side2 == @side3) || (@side1 == @side2) || (@side1 = @side3)
-  end
-
-  def valid?
-    (@side1 + @side2 > @side3) && (@side2 + @side3 > @side1) && (@side1 + @side3 > @side2)
-  end
-
-end
+  
 
 class TriangleError < StandardError   # triangle error code
 
