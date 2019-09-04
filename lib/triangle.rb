@@ -24,8 +24,8 @@ end
     end
 
     def validate_triangle
-        real_triangle = [(a + b > c), (a + c > b), (b + c > a)]
-        [a, b, c].each do |side|
+        real_triangle = [(a + b > c), (a + c > b), (b + c > a)] #this is a basic algorithm for determining real triangles
+        [a, b, c].each do |side|    # this iterates over the real_triangle array and shoves false into TriangleError if false.
           real_triangle << false if side <= 0
         raise TriangleError if real_triangle.include?(false)
         end
