@@ -1,5 +1,5 @@
 class Triangle
-  
+
 end
 
   attr_reader :side1, :side2, :side3
