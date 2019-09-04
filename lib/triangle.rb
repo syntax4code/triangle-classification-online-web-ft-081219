@@ -18,9 +18,9 @@ end
         :isosceles
       else
         :scalene
-        
+
       end
-      
+
     end
 
     def validate_triangle
@@ -30,6 +30,6 @@ end
         raise TriangleError if real_triangle.include?(false)
         end
         class TriangleError < StandardError   # the kind method should raise a custom error, TriangleError if the triangle is invalid
-          
+
       end
   end
