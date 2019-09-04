@@ -1,8 +1,8 @@
 class Triangle
-  # write code here
+  
 end
 
-  attr_accessor :side1, :side2, :side3
+  attr_reader :side1, :side2, :side3
   @sides = []
 
   def initialize(side1, side2, side3)
