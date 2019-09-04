@@ -10,7 +10,7 @@ end
     @sides = [side1, side2, side3]
   end
 
-  def kind  #Give your Triangles an instance method, kind that returns, as a symbol, :equilateral, :isosceles, :scalene
+  def kind  # the kind method returns, as a symbol, :equilateral, :isosceles, :scalene
       validate_triangle
       if side1 == side2 && side2 == side3
         :equilateral
