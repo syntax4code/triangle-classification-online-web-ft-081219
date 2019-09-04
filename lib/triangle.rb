@@ -1,7 +1,11 @@
 class Triangle
-  attr_accessor :equilateral, :isosceles, :scalene
+  # write code here
 end
-def initialize(side1, side2, side3)
+
+  attr_accessor :side1, :side2, :side3
+  @sides = []
+
+  def initialize(side1, side2, side3)
     @side1, @side2, @side3 = side1, side2, side3
     @sides = [side1, side2, side3]
   end
@@ -19,18 +23,18 @@ def initialize(side1, side2, side3)
   end
 
   def negative?
-      @sides.each do |length|
-        if(length <= 0)
-          return true
-        end
+    @sides.each do |length|
+      if(length <= 0)
+        return true
       end
     end
+  end
 
-    def equilateral?
-      (@side1 == @side2) && (@side1 == @side3)
-    end
+  def equilateral?
+    (@side1 == @side2) && (@side1 == @side3)
+  end
 
-    def scalene?
+  def scalene?
     (@side1 != @side2) && (@side1!= @side3) && (@side2 != @side3)
   end
 
@@ -43,6 +47,7 @@ def initialize(side1, side2, side3)
   end
 
 end
-class TriangleError < StandardError  # triangle error code
+
+class TriangleError < StandardError
 
 end
