@@ -12,9 +12,9 @@ end
 
   def kind  #Give your Triangles an instance method, kind that returns, as a symbol, :equilateral, :isosceles, :scalene
       validate_triangle
-      if side1 == side2 && side2 == c
+      if side1 == side2 && side2 == side3
         :equilateral
-      elsif side1 == side2 || side2 == c || side1 == c
+      elsif side1 == side2 || side2 == side3 || side1 == side3
         :isosceles
       else
         :scalene
