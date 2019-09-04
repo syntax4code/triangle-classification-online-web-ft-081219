@@ -31,6 +31,6 @@ end
 
 
 
-class TriangleError < StandardError   # triangle error code
+class TriangleError < StandardError   # the kind method should raise a custom error, TriangleError if the triangle is invalid
 
 end
